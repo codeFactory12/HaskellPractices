@@ -1,0 +1,111 @@
+! Tipos de datos soportados
+{
+#Tipos de letra segun tamaño
+# H2
+## H3
+### h4
+#### h5
+##### h6
+#Listas con punto 
+###### Primer elemento
+###### Segundo elemento
+###### Tercer elemento
+}
+---
+! Listas y Links
+{
+#Listas numeradas
+*$
+primero
+segundo
+tercero
+cuarto
+$*
+#Imagenes
+%https://res.cloudinary.com/dvsg7obzt/image/upload/v1701732050/ugjaspunfw4kirwgpq0p.png
+#Links
+%https://www.google.com
+; hola
+}
+---
+! Soporte de Codigo
+{
+#Codigo Haskell
+<&
+haskell
+scanner :: Input -> [Token]
+scanner xs = scan xs 1 1
+>&
+}
+---
+! Java
+{
+#Codigo Java
+<&
+java
+package l2f.gameserver.model;
+
+public abstract strictfp class L2Char extends L2Object {
+  public static final Short ERROR = 0x0001;
+
+  public void moveTo(int x, int y, int z) {
+    _ai = null;
+    log("Should not be called");
+    if (1 > 5) { // wtf!?
+      return;
+    }
+  }
+}
+>&
+}
+---
+! JavaScript
+{
+# Codigo JavaScript
+<&
+JavaScript
+function $initHighlight(block, cls) {
+  try {
+    if (cls.search(/\bno\-highlight\b/) != -1)
+      return process(block, true, 0x0F) +
+             ` class="${cls}"`;
+  } catch (e) {
+    /* handle exception */
+  }
+  for (var i = 0 / 2; i < classes.length; i++) {
+    if (checkCondition(classes[i]) === undefined)
+      console.log('undefined');
+  }
+
+  return (
+    <xmp>
+     <div>
+      <web-component>{block}</web-component>
+     </div>
+    </xmp>
+  )
+}
+>&
+}
+---
+! Textos
+{
+##Texto plano
+asdasdasd mi loco este es un parrafo para hacer la prueba de que si esto lo toma como parrafo o varias palabras tiene que ser un texto mas largo al parecer esto no alcanza para un parrafo sale la prueba nro 2 probaremos poner varias letras sin precionar enter y en la siguiente palabra preisono enter que debe ser un barra n entonces enter
+mi loco esto sigue como el mismo parrafo o es otro
+}
+---
+! Negrilla y italic
+{
+## Parrafo con negrilla
+Este sera un parrafo con ++bold++
+## Parrafo con italic
+Este sera un parrafo con +italic+
+## Parrafo unicamente con negrilla
+++Todo esto deberia ser un texto bold++
+## Parrafo unicamente con italic
++Todo esto deberia ser un texto italic+
+## Resaltador
+_ Este texto deberia estar resaltado _
+}
+---

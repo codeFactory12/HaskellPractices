@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">   
+    <title>Ejemplo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/theme/solarized.css" id="theme">
+    <script>
+        var srcUrlPrefix = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/';
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = srcUrlPrefix + (window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css');
+        document.getElementsByTagName('head')[0].appendChild(link);
+      </script>
+    <style>
+        section{
+            text-align: left;
+        }
+        h1{
+            text-align: center;
+        }
+        .image{
+            text-align: center;
+        }
+        a{
+            font-size: 30px;
+        }
+    </style> 
+</head>
+<body>
+    <div class = "reveal">
+    <div class = "slides">
+    <section>
+        <h2>Diapositiva 1</h2>
+        <h3>Subtítulo de tercer nivel</h3>
+        <p>Este es un párrafo con texto normal.</p>
+    </section>
+    <section>
+        <h2>Diapositiva 2</h2>
+        <h4><mark>Subtítulo de cuarto nivel</mark></h4>
+        <p>Este es otro párrafo.</p>
+    </section>
+    <section>
+        <h2>Diapositiva 3</h2>
+        <h5>Subtítulo de quinto nivel</h5>
+        <p><b>Y otro párrafo más. en este parrafo relataremos los infortunios de la vida en la que vivimos por que si por que
+            yolo y por que tengo que terminar </b><i>este trabajo, y quiero probar como se ve esta vaina por que soy practico y tengo
+            que escribir chingo de letras</i>
+        </p>
+        <li><a href="https://www.ejemplo.com">Enlace a Ejemplo</a></li>
+        <li><a href="#seccion1">Enlace a una sección dentro de esta página</a></li> 
+        <div class = "image">
+        <img src="https://res.cloudinary.com/dvsg7obzt/image/upload/v1701732050/ugjaspunfw4kirwgpq0p.png">
+        </div>
+        <pre><code class="haskell">
+  scanner :: Input -> [Token]
+  scanner xs = scan xs 1 1
+    </section>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/js/reveal.min.js"></script>
+    <script> Reveal.initialize( {slideNumber: 'c/t' }); 
+    </script>
+    </body>
+</html>

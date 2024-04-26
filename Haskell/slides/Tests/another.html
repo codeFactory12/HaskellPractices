@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Reveal.js template</title>
+  <!-- credit https://bl.ocks.org/elipousson/f64814b1ee4aab5d83775bfbf556d35a -->
+
+  <meta name="description" content="Simple Reveal.js slidedeck template. Source files loaded from jsDelivr.">
+  <meta name="author" content="jitesh@spinspire.com">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/reveal.min.css">
+  <!-- see https://cdnjs.com/libraries/reveal.js/3.6.0 for what's available -->
+  <!-- examples: simple, beige, black, blood, league, moon, night, serif, sky, solarized, white ... -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/theme/black.css" id="theme">
+  <!-- see: https://cdnjs.com/libraries/highlight.js/ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/ir-black.min.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var srcUrlPrefix = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/';
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = srcUrlPrefix + (window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css');
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  <style>
+    body {
+      /* make it totally black */
+      background-color: black;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .col {
+      flex: 1
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="reveal">
+
+    <div class="slides">
+
+      <section>
+        <h1>Reveal.js</h1>
+        <p>Simple Reveal.js slidedeck template.</p>
+        <p>See documentation here: <a
+            href="https://github.com/hakimel/reveal.js">https://github.com/hakimel/reveal.js</a></p>
+      </section>
+
+      <section>
+        <h2>Code in your slides</h2>
+        <p>Syntax highlighting, including line numbers.</p>
+        <div class="container">
+          <div class="col">
+            <pre><code class="hljs language-java">import java.jdbc.*;
+public class Foo extends Bar {
+  private String a;
+  private final int X = 42;
+
+  public String toString() {
+    // implement this method
+  }
+
+  // more stuff here
+}
+</code></pre>
+          </div>
+          <div class="col">
+            <pre><code class="hljs" data-line-numbers="7-14">import React, { useState } from 'react';
+
+const Example = () => {
+  const [count, setCount] = useState(0);
+  
+  // highlighted lines follow
+  return (
+    <div>
+      <p>Clicks = {count}</p>
+        Click me
+      </button>
+    </div>
+  );
+}
+</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Columns &amp; Highlights</h2>
+        <div class="container">
+          <div class="col">
+            <p class="fragment">Fragements reveal themselves on user input. Or have other transitions.</p>
+            <p class="fragment grow">grow</p>
+            <p class="fragment shrink">shrink</p>
+          </div>
+          <div class="col">
+            <p class="fragment fade-out">fade-out</p>
+            <p class="fragment fade-up">fade-up</p>
+            <p class="fragment fade-down">fade-down</p>
+            <p class="fragment fade-left">fade-left</p>
+            <p class="fragment fade-right">fade-right</p>
+            <p class="fragment fade-in-then-out">fades in, then out when we move to the next step</p>
+          </div>
+          <div class="col">
+            <p class="fragment fade-in-then-semi-out">fades in, then obfuscate when we move to the next step</p>
+            <p class="fragment highlight-current-blue">blue only once</p>
+            <p class="fragment highlight-red">highlight-red</p>
+            <p class="fragment highlight-green">highlight-green</p>
+            <p class="fragment highlight-blue">highlight-blue</p>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- .slides -->
+
+  </div><!-- .reveal -->
+
+  <!-- not needed since 3.8.0 -->
+  <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/lib/js/head.min.js"><script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/js/reveal.min.js"></script>
+  <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: false,
+      progress: false,
+      history: true,
+      center: true,
+      overview: false,
+      loop: false,
+
+      transition: 'zoom', // none/fade/slide/convex/concave/zoom
+
+      // Optional reveal.js plugins, loaded from jsDelivr
+      dependencies: [
+        { src: srcUrlPrefix + 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+        { src: srcUrlPrefix + 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+        { src: srcUrlPrefix + 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+        { src: srcUrlPrefix + 'plugin/highlight/highlight.js', async: true, condition: function () { return !!document.querySelector('pre code'); }, callback: function () { hljs.initHighlightingOnLoad(); } },
+        { src: srcUrlPrefix + 'plugin/zoom-js/zoom.js', async: true },
+        { src: srcUrlPrefix + 'plugin/notes/notes.js', async: true }
+      ]
+    });
+  </script>
+</body>
+
+</html>

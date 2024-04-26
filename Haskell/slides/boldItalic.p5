@@ -1,0 +1,8 @@
+! BoldItalic
+{
+Primer parrafo con ++ negrilla ++ ++ primer parrafo esto seguiria siendo el mismo parrafo ++ Este es un parrafo que deberia estar aparte
+
+
+Este deberia ser otro parrafo con +italica+ este deberia ser tomado en cuenta como otro parrafo
+}
+---
